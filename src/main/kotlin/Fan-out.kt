@@ -9,7 +9,7 @@ fun main() {
     runBlocking {
         val producer = produceNewNumbers()
         repeat(5) { launchProcessor(it, producer) }
-        delay(1500L)
+        delay(2000L)
         producer.cancel()
     }
 }
